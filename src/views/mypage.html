@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>My Page</title>
+    <link rel="stylesheet" href="stylesheets/mypage.css">
+    <script src="javascripts/main.js"></script>
+</head>
+<body>
+    <div>
+        <img src ="images/모바일.png" width="100%">
+            <div class="navbor">
+                <input type="button" style="width: 10%; height: 5%;" class="back_button" onclick="location.href='/join'">
+                <form action="/auth/logout"><input type="submit"  class="logout_button" value="로그아웃"></form>
+            </div>
+
+            <div class="time">
+                <script>
+                    let dateO = Today_time();
+                    let timeO = Clock();    
+                    document.write(dateO.year + '년 ' + dateO.month + '월 ' + dateO.date + '일 ' + timeO.period);
+                </script>
+            </div>
+
+            <div class="main">
+                <button style="width: 700px;  height: 140px;" id="teacher">{{name}} 선생님</button>
+                <button style="width: 700px;  height: 140px;" id="dsm-id">아이디 : {{nick}}</button>
+                <button style="width: 700px;  height: 140px;" id="subject">담당 과목 : {{subject}}</button>
+                <button style="width: 700px;  height: 140px;" id="sc-year">담당 학년 : {{class}}</button>
+            </div>
+
+    </div>
+</body>
+</html>
