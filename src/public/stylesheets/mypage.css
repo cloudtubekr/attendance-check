@@ -1,0 +1,68 @@
+body{
+    margin: 0;
+}
+
+.back{
+    position: absolute;
+    left: -2px;
+    top: -6px;
+}
+
+.back_button{
+    position: absolute;
+    left: 14px;
+    top: 12px;
+    opacity: 0;
+}
+
+.logout_button{
+    position: absolute;
+    right: 25px;
+    top: 30px;
+    background-color: white;
+    font-size: 45px;
+    border: none;
+    color: #d6edf7;
+    
+}
+
+.time{
+    position: absolute;
+    left: 130px;
+    top: 150px;
+    font-size: 55px;
+}
+
+#teacher{
+    position: absolute;
+    top: 740px;
+    left: 18%;
+    background-color: white;
+    border: 1px solid #fff;
+    font-size: 55px;
+}
+#dsm-id{
+    position: absolute;
+    top: 934px;
+    left: 18%; 
+    background-color: white;
+    border: 1px solid #fff;
+    font-size: 55px;
+}
+#subject{
+    position: absolute;
+    top: 1128px;
+    left:18%;
+    background-color: white;
+    border: 1px solid #fff;
+    font-size: 55px;
+}
+
+#sc-year{
+    position: absolute;
+    top: 1322px;
+    left: 18%;
+    background-color: white;
+    border: 1px solid #fff;
+    font-size: 55px;
+}

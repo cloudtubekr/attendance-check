@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSM CHEAK</title>
+    <link rel="stylesheet" href="stylesheets/mobilesign.css">
+</head>
+<body>
+    <div class="all">
+        <div class="main-txt">
+            <img rel="stylesheet" src="images/이재원로고.png">
+        </div>
+
+        <main>
+            <div class="signbox">
+                <div class="signbox2">
+                    <form method="post" action="/auth/sign">
+                        <div class="sign">
+                            <input name="nick" type="text" placeholder="아이디">
+                            <input name="password" type="password" placeholder="비밀번호">
+                            <input name="repassword" type="password" placeholder="비밀번호확인">
+                            <input name="name" type="text" placeholder="이름">
+                            <input name="subject" type="text" placeholder="담당과목">
+                            <input name="cla" type="text" placeholder="담당학년">
+                        </div>
+                        <div class="signbor">
+                            <input type="submit" class="signclick" href="mobileloginafter.html" value="회원가입">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

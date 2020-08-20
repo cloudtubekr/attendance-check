@@ -1,0 +1,50 @@
+.all{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.main-txt{
+    width: 230px;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+main{
+    background-color: #d6edf9;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 250px;
+    border: none;
+    box-shadow: 10px 10px 10px #ccc;
+
+}
+
+.signbox2{
+    justify-content: center;
+    text-align: center;
+}
+
+.sign input{
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 4px 4px 4px #ccc;
+}
+
+.signbor{
+    margin: 20px;
+}
+
+.signclick{
+    background-color: white;
+    margin-bottom: 20px;
+    font-size: 25px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 4px 4px 4px #ccc;
+    text-decoration: none;
+    color: #757575;
+}
