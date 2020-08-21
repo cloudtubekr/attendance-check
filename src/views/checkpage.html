@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <title>Team.pro</title>
+    <head>
+        <link rel="stylesheet" href="stylesheets/checkpage.css">
+        <script src="javascripts/main.js"></script>
+    </head>
+    <body>
+       <div> 
+        <img src ="images/모바일.png"width="100%">
+        <div class="navbor">
+            <input type="button" style="width: 10%; height: 5%;" class="back_button" onclick="location.href='/class'">
+            <input type="button"  class="logout_button" onclick="location.href='/auth/logout'" value="로그아웃">
+        </div>
+
+            <div class="time">
+                <script>
+                    let dateO = Today_time();
+                    let timeO = Clock();   
+                    document.write(dateO.year + '년 ' + dateO.month + '월 ' + dateO.date + '일 ' + timeO.period);
+                </script>
+            </div>
+
+            <div class="box">
+                <div id="scroll">
+                    <table border="1px" style="width: 680px; height: 2000px; font-size: 40px;">
+                        <thead> 
+                            <tr>
+                                <th>학번</th>
+                                <th>이름</th>
+                                <th>출석 여부</th>
+                            </tr>  
+                        </thead>
+                        <tbody id="table">
+
+                        </tbody>        
+                    </table>
+                </div>   
+            </div>       
+                
+        </div>
+        <script>
+            let number = ["1101", "1102", "1103", "1104", "1105", "1106" , "1107", "1108", "1109","1110", "1111", "1112", "1113", "1114", "1115" , "1116", "1117", "1118","1119", "1120", "1121"];
+            let number2 = ["김경원", "김민재", "김수완", "김예승", "김예진", "김태이" , "김혜준", "문준혁", "민동건","성예인", "손채건", "신희원", "양진혁", "이은별", "이재성" , "이재원", "장윤주", "조호원","최민준", "최아연", "한준호", "121", "122", "123" , "한준호"];
+            
+            let colunm = document.querySelector("#table");
+
+            function init() { // 하루에 한 번씩만 실행
+                number.forEach((item) => {
+                    if(localStorage.getItem(`checkbox${item}`) === null)
+                        localStorage.setItem(`checkbox${item}`, 'true');
+                    else {
+                        return;
+                    }
+                });
+            }
+
+            init();
+
+            function handleClick(e) {
+                //alert("hello");
+                const key = e.target.className;
+                const value = e.target.checked;  
+                localStorage.setItem(key, value);
+            }
+            
+            const promise = new Promise((resolve, reject) => {
+                number.forEach((item, index) =>  {
+                let checkValue;
+                if(localStorage.getItem(`checkbox${item}`) === "true") {
+                    checkValue = "checked";
+                } else {
+                    checkValue = '';
+                }
+                const checkbox = `<input type='checkbox' style='width: 50px; height: 50px; margin-left: 120px;' class='checkbox${item}' ${checkValue}> `;
+                colunm.innerHTML += "<tr>"; 
+                colunm.innerHTML += "<td>" + item + "</td>" + "<td>" + number2[index] + "</td>" + "<td>" + checkbox + "</td>"; 
+                colunm.innerHTML += "</tr>"
+                resolve();
+                });
+            }).then(() => {
+                number.forEach((item) => {
+                    const checkbox = document.querySelector(`.checkbox${item}`);
+                    checkbox.addEventListener("click", handleClick);
+
+                });
+            }).catch((err) => {
+                console.error(err);
+            });
+            
+        </script>
+    </body>
+</html>

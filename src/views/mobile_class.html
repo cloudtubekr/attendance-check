@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <title>Team.pro</title>
+    <head>
+        <script src="javascripts/main.js"></script>
+    <style>
+        body{
+            margin: 0;
+        }
+        .back{
+            position: absolute;
+            left: -2px;
+            top: -6px;
+        }
+
+        .back_button{
+            position: absolute;
+            left: 14px;
+            top: 12px;
+            opacity: 0;
+        }
+
+        .time{
+            position: absolute;
+            left: 130px;
+            top: 150px;
+            font-size: 55px;
+        }
+
+        .logout_button{
+            position: absolute;
+            right: 30px;
+            top: 35px;
+            background-color: white;
+            font-size: 45px;
+            border: none;
+            color: #d6edf7;
+        }
+        
+        #class_1{
+            position: absolute;
+            top: 600px;
+            left: 180px;
+            background-color:white;;
+            border: 1px solid #fff;
+        }
+        #class_2{
+            position: absolute;
+            top: 854px;
+            left: 180px; 
+            background-color: white;
+            border: 1px solid #fff;
+        }
+        #class_3{
+            position: absolute;
+            top: 1088px;
+            left: 180px;
+            background-color: white;
+            border: 1px solid #fff;
+        }
+        #class_4{
+            position: absolute;
+            top: 1322px;
+            left: 180px;
+            background-color: white;
+            border: 1px solid #fff;
+        }
+    </style>
+    </head>
+    <body>
+       <div> 
+        <img src ="images/모바일.png"width="100%">              
+            <div class="navbor">
+                <input type="button" style="width: 10%; height: 5%;" class="back_button" onclick="location.href='/grade'">
+                <input type="button"  class="logout_button" onclick="location.href='auth/logout'" value="로그아웃">
+            </div>
+
+            <div class="time">
+                <script>
+                    let dateO = Today_time();
+                    let timeO = Clock();    
+                    document.write(dateO.year + '년 ' + dateO.month + '월 ' + dateO.date + '일 ' + timeO.period);
+                </script>
+            </div>
+
+            <div class="grade_button">
+                <button onclick="location.href='/attend'" style="width: 700px;  height: 220px;" id="class_1"><h2 style="font-size: 100px;">1반</h2></button>
+                <button onclick="location.href='/attend'" style="width: 700px;  height: 220px;" id="class_2"><h2 style="font-size: 100px;">2반</h2></button>
+                <button onclick="location.href='/attend'" style="width: 700px;  height: 220px;" id="class_3"><h2 style="font-size: 100px;">3반</h2></button>
+                <button onclick="location.href='/attend'" style="width: 700px;  height: 220px;" id="class_4"><h2 style="font-size: 100px;">4반</h2></button>
+            </div>      
+       </div>
+    </body>
+</html>

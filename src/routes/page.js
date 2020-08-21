@@ -1,7 +1,6 @@
 const express = require('express');
 
 const router = express.Router();
-
 /* GET users listing. */
 router.use((req, res, next) => {
   res.locals.user = req.user;
@@ -40,6 +39,19 @@ router.get("/join", (req, res) => {
     res.render("mobileloginafter", {name: "error"});
   }
 });
+
+router.get("/grade", (req, res) => {
+  res.render("mobile_grade");
+});
+
+router.get("/class", (req, res) => {
+  res.render("mobile_class");
+});
+
+router.get("/attend", (req, res) => {
+  res.render("checkpage");
+});
+
 
 router.get("/mypage", (req, res) => {
   const { name, nick, subject } = req.cookies;

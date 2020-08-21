@@ -1,0 +1,62 @@
+
+html {
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+}
+
+.back{
+    position: absolute;
+    left: -2px;
+    top: -6px;
+}
+
+.back_button{
+    position: absolute;
+    left: 14px;
+    top: 12px;
+    opacity: 0;
+}
+
+.logout_button{
+    position: absolute;
+    right: 30px;
+    top: 35px;
+    background-color: white;
+    font-size: 45px;
+    border: none;
+    color: #d6edf7;
+}
+
+.time{
+    position: absolute;
+    left: 130px;
+    top: 150px;
+    font-size: 55px;
+}
+
+#scroll{
+    overflow: scroll;
+    height: 900px;
+}
+.box{
+    position: absolute;
+    top: 670px;
+    left: 170px;
+    width: 700px;
+    height: 930px;
+}
+.back_button{
+    position: absolute;
+    left: 16px;
+    top: 25px;
+    width: 55px; 
+    height: 60px;
+}
+.back{
+    position: absolute;
+    left: -4px;
+    top: -9px;
+    width: 100px;
+}
