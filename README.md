@@ -6,7 +6,14 @@ mobilesign -> 회원가입 페이지
 
 mypage -> 로그인후 메인페이지에서 내 정보를 누르면 이동되는 페이지
 
+mobile_grade -> 학년 선택 페이지
 
-내 정보 png -> mypage의 배경
+mobile_class -> 반 선택 페이지
 
-모바일 png -> 일단 가지고있기
+checkpage -> 출석체크 및 출석여부 페이지
+
+모바일 png -> 배경
+
+main.js -> 현재 날짜, 교시
+
+mobilesign -> 회원가입
